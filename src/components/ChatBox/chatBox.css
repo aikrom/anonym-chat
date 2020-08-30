@@ -20,6 +20,7 @@
 	padding: 20px;
 	border-bottom: 1px solid #eeeeee;
 }
+
 .chat-box__messages {
 	min-height: 70vh;
 	max-height: 70vh;
@@ -27,13 +28,16 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
 .chat-box__bottom {
 	padding: 20px;
 	border-top: 1px solid #eeeeee;
 }
+
 .chat-box__form {
 	display: flex;
 }
+
 .chat-box__input {
 	flex: 1;
 	margin-right: 10px;
@@ -41,6 +45,7 @@
 	border: 1px solid #dedede;
 	padding: 0 15px;
 }
+
 .chat-box__submit-btn {
 	border-radius: 2px;
 	border: 0;

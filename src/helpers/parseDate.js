@@ -1,6 +1,6 @@
 /**
  * Parse and format date
- * @param {number} datetime - Datetime
+ * @param {number} date - Datetime
  * @returns {string} Formatted date
  */
 export const parseDate = (date) => {

@@ -6,7 +6,7 @@ import './chatBox.css';
 
 /**
  * Chat box component
- * @param {array} messages - array of messages objects
+ * @param {array} messages - Array of messages objects
  * @param {function} onWriteMessage - Function to write data into database
  * @returns {JSX.Element} React function component
  */
@@ -19,6 +19,10 @@ export const ChatBox = ({ messages, onWriteMessage }) => {
 		messageBoxRef.current.scrollTop = messageBoxRef.current.scrollHeight;
 	}, [messages]);
 
+	/**
+	 * Form sumbit handler
+	 * @param {Object} e - Form submit event
+	 */
 	const submitHandle = (e) => {
 		e.preventDefault();
 

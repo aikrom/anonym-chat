@@ -5,7 +5,7 @@ import './styles/index.css';
 
 /**
  * Main app component
- * @returns {JSX.Element} React function component
+ * @returns {JSX.Element} Returns react function component
  */
 export const App = () => {
 	const [auth, authError] = useAuth();
@@ -13,9 +13,10 @@ export const App = () => {
 
 	/**
 	 * This function just add user id into arguments
-	 * @typedef {string} color - message background color
-	 * @typedef {string} message - message string
-	 * @param {{color, message}} args
+	 * @typedef {Object} Message
+	 * @property {string} color - message background color
+	 * @property {string} message - message string
+	 * @param {Message} args
 	 */
 	const writeMessageHandle = (args) => {
 		writeMessage({ ...args, uid: auth.uid });
