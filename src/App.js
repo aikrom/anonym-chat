@@ -1,13 +1,14 @@
 import React from 'react';
+import { useAuth } from './hooks';
 
-function App() {
-  return (
-    <div className="App">
-      <header>
-        <h1>Hello, world!</h1>
-      </header>
-    </div>
-  );
-}
+export const App = () => {
+	const [auth, authError] = useAuth();
+
+	if (authError) {
+		return <div>Auth error</div>;
+	}
+
+	return <div className="App">{auth ? auth.uid : 'Create authentificate connection...'}</div>;
+};
 
 export default App;
