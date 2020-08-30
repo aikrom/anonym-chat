@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth } from './hooks';
+import { MessageBox } from './components/MessageBox';
 import './styles/index.css';
 
 export const App = () => {
@@ -13,7 +14,11 @@ export const App = () => {
 		return <div className="app">Create authentificate connection...</div>;
 	}
 
-	return <div className="app">App</div>;
+	return (
+		<div className="app">
+			<MessageBox />
+		</div>
+	);
 };
 
 export default App;
