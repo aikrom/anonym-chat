@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { getRandomColor } from '../../helpers/generateColors';
 import { MessageItem } from '../MessageItem';
 import './chatBox.css';
-import { ChatBox } from '.';
 
 /**
  * Chat box component
@@ -11,7 +10,7 @@ import { ChatBox } from '.';
  * @param {function} onWriteMessage - Function to write data into database
  * @returns {JSX.Element} React function component
  */
-export const Chat = ({ messages, onWriteMessage }) => {
+export const ChatBox = ({ messages, onWriteMessage }) => {
 	const messageBoxRef = useRef(null);
 	const [messageValue, setMessageValue] = useState('');
 	const [messageColor, setMessageColor] = useState(null);

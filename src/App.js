@@ -3,24 +3,34 @@ import { useAuth, useMessages } from './hooks';
 import { ChatBox } from './components/ChatBox';
 import './styles/index.css';
 
+/**
+ * Main app component
+ * @returns {JSX.Element} React function component
+ */
 export const App = () => {
 	const [auth, authError] = useAuth();
 	const [messages, readError, writeError, writeMessage] = useMessages();
 
+	/**
+	 * This function just add user id into arguments
+	 * @typedef {string} color - message background color
+	 * @typedef {string} message - message string
+	 * @param {{color, message}} args
+	 */
 	const writeMessageHandle = (args) => {
 		writeMessage({ ...args, uid: auth.uid });
 	};
 
 	if (authError) {
-		return <div className="app">Auth error</div>;
+		return <div className="app">Session authentification error</div>;
 	}
 
 	if (!auth) {
-		return <div className="app">Create authentificate connection...</div>;
+		return <div className="app">Creating session authentificion...</div>;
 	}
 
 	if (readError || writeError) {
-		return <div className="app">Database error...</div>;
+		return <div className="app">Some error on database</div>;
 	}
 
 	return (
