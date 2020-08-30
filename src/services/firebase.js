@@ -1,3 +1,8 @@
+/**
+ * A module that configure Firebase connection
+ * @module firebase
+ */
+
 import firebase from 'firebase';
 
 const firebaseConfig = {
@@ -12,5 +17,8 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+/* Firebase auth function */
 export const { auth } = firebase;
+
+/* Firebase database function */
 export const db = firebase.database();
