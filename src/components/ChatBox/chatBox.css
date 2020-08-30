@@ -1,5 +1,5 @@
 /* Block */
-.message-box {
+.chat-box {
 	display: flex;
 	flex-direction: column;
 	align-content: center;
@@ -9,39 +9,39 @@
 }
 
 /* Modificators */
-.message-box--default {
+.chat-box--default {
 	background-color: #ffffff;
 	border-radius: 2px;
 	box-shadow: 0 0 1px 1px #dfdfdf;
 }
 
 /* Elements */
-.message-box__header {
+.chat-box__header {
 	padding: 20px;
 	border-bottom: 1px solid #eeeeee;
 }
-.message-box__messages {
+.chat-box__messages {
 	min-height: 70vh;
 	max-height: 70vh;
 	padding: 20px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
-.message-box__bottom {
+.chat-box__bottom {
 	padding: 20px;
 	border-top: 1px solid #eeeeee;
 }
-.message-box__form {
+.chat-box__form {
 	display: flex;
 }
-.message-box__input {
+.chat-box__input {
 	flex: 1;
 	margin-right: 10px;
 	border-radius: 2px;
 	border: 1px solid #dedede;
 	padding: 0 15px;
 }
-.message-box__submit-btn {
+.chat-box__submit-btn {
 	border-radius: 2px;
 	border: 0;
 	padding: 10px 25px;

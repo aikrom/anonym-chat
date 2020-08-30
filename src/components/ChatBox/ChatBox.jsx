@@ -2,15 +2,16 @@ import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { getRandomColor } from '../../helpers/generateColors';
 import { MessageItem } from '../MessageItem';
-import './messageBox.css';
+import './chatBox.css';
+import { ChatBox } from '.';
 
 /**
- * Messages box component
+ * Chat box component
  * @param {array} messages - array of messages objects
  * @param {function} onWriteMessage - Function to write data into database
  * @returns {JSX.Element} React function component
  */
-export const MessageBox = ({ messages, onWriteMessage }) => {
+export const Chat = ({ messages, onWriteMessage }) => {
 	const messageBoxRef = useRef(null);
 	const [messageValue, setMessageValue] = useState('');
 	const [messageColor, setMessageColor] = useState(null);
@@ -34,8 +35,8 @@ export const MessageBox = ({ messages, onWriteMessage }) => {
 	};
 
 	return (
-		<div className="message-box message-box--default">
-			<div className="message-box__messages" ref={messageBoxRef}>
+		<div className="chat-box chat-box--default">
+			<div className="chat-box__messages" ref={messageBoxRef}>
 				{messages.length
 					? messages.map((item) => (
 							<MessageItem
@@ -47,17 +48,17 @@ export const MessageBox = ({ messages, onWriteMessage }) => {
 					  ))
 					: null}
 			</div>
-			<div className="message-box__bottom">
+			<div className="chat-box__bottom">
 				<form onSubmit={submitHandle}>
-					<div className="message-box__form">
+					<div className="chat-box__form">
 						<input
 							type="text"
 							placeholder="Write your message"
-							className="message-box__input"
+							className="chat-box__input"
 							value={messageValue}
 							onChange={(e) => setMessageValue(e.target.value)}
 						/>
-						<button type="submit" className="message-box__submit-btn">
+						<button type="submit" className="chat-box__submit-btn">
 							Send
 						</button>
 					</div>
@@ -67,7 +68,7 @@ export const MessageBox = ({ messages, onWriteMessage }) => {
 	);
 };
 
-MessageBox.propTypes = {
+ChatBox.propTypes = {
 	messages: PropTypes.arrayOf(
 		PropTypes.shape({
 			color: PropTypes.string.isRequired,
@@ -79,4 +80,4 @@ MessageBox.propTypes = {
 	onWriteMessage: PropTypes.func.isRequired,
 };
 
-export default MessageBox;
+export default ChatBox;

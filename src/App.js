@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth, useMessages } from './hooks';
-import { MessageBox } from './components/MessageBox';
+import { ChatBox } from './components/ChatBox';
 import './styles/index.css';
 
 export const App = () => {
@@ -25,7 +25,7 @@ export const App = () => {
 
 	return (
 		<div className="app">
-			<MessageBox messages={messages} onWriteMessage={writeMessageHandle} />
+			<ChatBox messages={messages} onWriteMessage={writeMessageHandle} />
 		</div>
 	);
 };

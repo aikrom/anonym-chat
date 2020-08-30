@@ -4,4 +4,4 @@
  * File exports all hooks from direactory
  */
 
-export { default as MessageBox } from './MessageBox';
+export { default as ChatBox } from './ChatBox';
