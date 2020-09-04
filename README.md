@@ -24,4 +24,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Notes from author
 
 - I'm not good at writing JSDoc comments
-- My English isn't perfect, so there me be mistakes
+- My English isn't perfect, so there maybe mistakes
